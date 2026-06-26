@@ -7,7 +7,7 @@ data class Article (
     val id : String,
     val title : String,
     val url : String,
-    val imageUrl : String,
+    val imageUrl : String? = null,
     val communityId : String,
     val communityName : String
 )

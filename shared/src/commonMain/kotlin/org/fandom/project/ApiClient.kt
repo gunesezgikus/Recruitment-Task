@@ -22,7 +22,7 @@ class ApiClient {
     suspend fun fetchArticles():List<Article>{
         return try {
             val response = client.get("https://services.fandom.com/mobile-sidekick/trending/articles")
-            response.body()
+            response.body<List<Article>>()
         } catch (e: Exception){
             println("API error: ${e.message}")
             emptyList()
